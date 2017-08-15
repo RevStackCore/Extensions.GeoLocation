@@ -1,0 +1,19 @@
+{
+  "name": "RevStackCore.Extensions.GeoLocation",
+  "version": "1.0.0",
+  "description": "Geolocation extensions",
+	"main": "RevStackCore.Extensions.GeoLocation.sln",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+		"url": "https://github.com/RevStackCore/Extensions.GeoLocation.git"
+  },
+  "author": "S. Francis",
+  "license": "MIT",
+  "bugs": {
+		"url": "https://github.com/RevStackCore/Extensions.GeoLocation/issues"
+  },
+	"homepage": "https://github.com/RevStackCore/Extensions.GeoLocation"
+}
