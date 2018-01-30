@@ -10,7 +10,7 @@ namespace RevStackCore.Extensions.GeoLocation
         public async Task<GeoCoordinate> GetAsync(string ipAddress)
         {
             string url = FREE_GEO_IP_JSON_URL + ipAddress;
-            string result = await Http.GetJsonAsync(url);
+            string result = await Http.GetAsync(url);
             var geoResult = Json.DeserializeObject<FreeGeoIpResult>(result);
             return new GeoCoordinate(geoResult.Latitude, geoResult.Longitude);
         }
