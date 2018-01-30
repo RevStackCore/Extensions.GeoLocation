@@ -34,22 +34,17 @@ namespace RevStackCore.Extensions.GeoLocation
 
 		public static bool IsLocalIpAddress(this string ipAddress)
 		{
-			int[] ipParts = ipAddress.Split(new String[] { "." }, StringSplitOptions.RemoveEmptyEntries)
-							 .Select(s => int.Parse(s)).ToArray();
-			// in private ip range
-			if (ipParts[0] == 10 ||
-				(ipParts[0] == 192 && ipParts[1] == 168) ||
-				(ipParts[0] == 172 && (ipParts[1] >= 16 && ipParts[1] <= 31)))
-			{
-				return true;
-			}
-
-			return false;
+            return IsLocalAddress(ipAddress);
 		}
 
 		public static bool IsLocalAddress(string ipAddress)
 		{
-			int[] ipParts = ipAddress.Split(new String[] { "." }, StringSplitOptions.RemoveEmptyEntries)
+            if(ipAddress=="0.0.0.1" || ipAddress=="0.0.0.0" || ipAddress=="127.0.0.1" || ipAddress=="localhost")
+            {
+                return true;
+            }
+           
+            int[] ipParts = ipAddress.Split(new String[] { "." }, StringSplitOptions.RemoveEmptyEntries)
 							 .Select(s => int.Parse(s)).ToArray();
 			// in private ip range
 			if (ipParts[0] == 10 ||
