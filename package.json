@@ -1,6 +1,6 @@
 {
   "name": "RevStackCore.Extensions.GeoLocation",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Geolocation extensions",
 	"main": "RevStackCore.Extensions.GeoLocation.sln",
   "scripts": {
