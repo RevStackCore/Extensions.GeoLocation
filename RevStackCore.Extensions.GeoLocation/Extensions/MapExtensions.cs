@@ -11,7 +11,7 @@ namespace RevStackCore.Extensions.GeoLocation
 
 		public static string ToGoogleAddress(this IAddressLocation source)
 		{
-			return source.Street + ", " + source.City + ", " + source.RegionCode + " " + source.RegionCode;
+            return source.Street + ", " + source.City + ", " + source.RegionCode + " " + source.ZipCode;
 		}
     }
 }
