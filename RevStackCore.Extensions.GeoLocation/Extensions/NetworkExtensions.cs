@@ -37,7 +37,13 @@ namespace RevStackCore.Extensions.GeoLocation
             return IsLocalAddress(ipAddress);
 		}
 
-		public static bool IsLocalAddress(string ipAddress)
+        public static bool IsPublicIpAddress(this string ipAddress)
+        {
+            bool isLocal= IsLocalAddress(ipAddress);
+            return (isLocal == false);
+        }
+
+        public static bool IsLocalAddress(string ipAddress)
 		{
             if(ipAddress=="0.0.0.1" || ipAddress=="0.0.0.0" || ipAddress=="127.0.0.1" || ipAddress=="localhost")
             {
@@ -56,5 +62,11 @@ namespace RevStackCore.Extensions.GeoLocation
 
 			return false;
 		}
+
+        public static bool IsPublicAddress(string ipAddress)
+        {
+            bool isLocal = IsLocalAddress(ipAddress);
+            return (isLocal == false);
+        }
     }
 }
