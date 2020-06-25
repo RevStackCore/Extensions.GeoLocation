@@ -28,5 +28,7 @@ namespace RevStackCore.Extensions.GeoLocation
         public string City { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
+        public bool IsProxy { get; set; }
+        public bool  IsBot { get; set; }
     }
 }
