@@ -10,6 +10,12 @@ namespace RevStackCore.Extensions.GeoLocation
         public double? Accuracy { get; set; }
         public double? AltitudeAccuracy { get; set; }
         public double? Heading { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string ZipCode { get; set; }
+        public string CountryCode { get; set; }
+        public bool IsProxy { get; set; }
+        public bool IsBot { get; set; }
 
         public GeoCoordinate()
         {
@@ -21,14 +27,5 @@ namespace RevStackCore.Extensions.GeoLocation
             Longitude = longitude;
         }
 
-    }
-
-    public class ExtendedGeoCoordinate : GeoCoordinate
-    {
-        public string City { get; set; }
-        public string State { get; set; }
-        public string ZipCode { get; set; }
-        public bool IsProxy { get; set; }
-        public bool  IsBot { get; set; }
     }
 }
