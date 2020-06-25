@@ -11,11 +11,22 @@ namespace RevStackCore.Extensions.GeoLocation
         public double? AltitudeAccuracy { get; set; }
         public double? Heading { get; set; }
 
+        public GeoCoordinate()
+        {
+
+        }
         public GeoCoordinate(double latitude, double longitude)
         {
             Latitude = latitude;
             Longitude = longitude;
         }
 
+    }
+
+    public class ExtendedGeoCoordinate : GeoCoordinate
+    {
+        public string City { get; set; }
+        public string State { get; set; }
+        public string ZipCode { get; set; }
     }
 }
